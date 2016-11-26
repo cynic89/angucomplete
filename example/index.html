@@ -40,6 +40,18 @@
 
             </div>
 
+						<div class="large-padded-row">
+                <h3>Example 3 - Countries of the World with promise. Instead of passing a url, you can pass a function that returns a promise</h3>
+                <div class="padded-row">
+                    <angucomplete id="ex1" placeholder="Search countries" pause="100" selectedobject="selectedCountry" search-fn="searchFn()" searchfields="name" titlefield="name" minlength="1" inputclass="form-control form-control-small" matchclass="highlight" />
+                </div>
+                <div class="" ng-show="selectedCountry">
+                    You selected <span class="bold-span">{{selectedCountry.originalObject.name}}</span> which has a country code of <span class="bold-span">{{selectedCountry.originalObject.code}}</span>
+                </div>
+
+
+            </div>
+
             <div class="very-large-padded-row">
                 <h2>How to use</h2>
                 <p>

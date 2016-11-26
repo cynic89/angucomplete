@@ -1,5 +1,5 @@
-app.controller('MainController', ['$scope', '$http',
-    function MainController($scope, $http) {
+app.controller('MainController', ['$scope', '$http', '$timeout',
+    function MainController($scope, $http, $timeout) {
 
         $scope.people = [
             {firstName: "Daryl", surname: "Rowland", twitter: "@darylrowland", pic: "img/daryl.jpeg"},
@@ -253,5 +253,10 @@ app.controller('MainController', ['$scope', '$http',
             {name: 'Zimbabwe', code: 'ZW'}
         ];
 
+        $scope.searchFn = function(){
+                  return $timeout(function(){
+                    return {data: $scope.countries};
+                  }, 1000)
+                };
     }
 ]);
